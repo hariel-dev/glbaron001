@@ -364,11 +364,11 @@ function Index() {
               <div className="mt-5 flex flex-wrap gap-2.5">
                 {setoresB2B.map((s) => (
                   <span
-                    key={s}
+                    key={s.nome}
                     className="inline-flex items-center gap-1.5 rounded-full border border-primary-foreground/20 bg-primary-foreground/[0.06] px-3.5 py-1.5 text-xs font-medium text-primary-foreground/85"
                   >
-                    <Factory className="h-3.5 w-3.5 text-accent" />
-                    {s}
+                    <s.icon className="h-3.5 w-3.5 text-accent" />
+                    {s.nome}
                   </span>
                 ))}
               </div>
