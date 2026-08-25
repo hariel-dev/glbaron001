@@ -193,11 +193,12 @@ const servicosB2B = [
 ];
 
 const setoresB2B = [
-  "Açougues & Frigoríficos",
-  "Supermercados",
-  "Restaurantes & Padarias",
-  "Distribuidoras de Bebidas",
-  "Hortifrútis",
+  { nome: "Açougues & Frigoríficos", icon: Factory },
+  { nome: "Supermercados", icon: Factory },
+  { nome: "Restaurantes & Padarias", icon: Factory },
+  { nome: "Distribuidoras de Bebidas", icon: Factory },
+  { nome: "Hortifrútis", icon: Factory },
+  { nome: "Fazendas & Produtores Rurais", icon: Tractor },
 ];
 
 const marcasParceiras = [
