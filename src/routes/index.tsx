@@ -38,6 +38,8 @@ import heroImg from "@/assets/hero-split.jpg";
 import splitImg from "@/assets/split.jpg";
 import cassetteImg from "@/assets/cassette.jpg";
 import pisoTetoImg from "@/assets/piso-teto.jpg";
+import instalacaoResidencialImg from "@/assets/instalacao-residencial.jpg";
+import instalacaoComercialImg from "@/assets/instalacao-comercial.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
