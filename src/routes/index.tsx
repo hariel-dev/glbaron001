@@ -105,6 +105,24 @@ const modelos = [
   },
 ];
 
+const pilares = [
+  {
+    icon: Award,
+    title: "Qualidade",
+    text: "Excelência na escolha dos produtos, ferramentas e execução técnica.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Ética",
+    text: "Relacionamento transparente, diagnóstico honesto e respeito ao cliente.",
+  },
+  {
+    icon: Leaf,
+    title: "Sustentabilidade",
+    text: "Foco em eficiência energética, economia na conta de luz e descarte responsável.",
+  },
+];
+
 const beneficios = [
   {
     text: "Instalador Credenciado Midea e Philco: Mantemos a garantia de fábrica do seu equipamento na instalação.",
