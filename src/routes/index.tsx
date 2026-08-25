@@ -640,6 +640,8 @@ function Index() {
                     <option>Manutenção preventiva (PMOC)</option>
                     <option>Higienização</option>
                     <option>Manutenção corretiva</option>
+                    <option>Câmaras Frias</option>
+                    <option>Resfriadores de Leite</option>
                     <option>Outro</option>
                   </select>
                 </label>
