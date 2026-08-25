@@ -77,7 +77,7 @@ const servicos = [
   },
   {
     icon: SprayCan,
-    title: "Higienização Profunda",
+    title: "Limpeza e Higienização",
     text: "Limpeza técnica completa com eliminação de fungos, ácaros e bactérias do sistema.",
   },
   {
