@@ -14,6 +14,10 @@ import {
   Factory,
   RefreshCw,
   Building2,
+  Instagram,
+  Award,
+  HeartHandshake,
+  Leaf,
 } from "lucide-react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
@@ -29,7 +33,9 @@ import {
   CITY,
 } from "@/lib/site";
 import heroImg from "@/assets/hero-split.jpg";
-import tecnicoImg from "@/assets/tecnico.jpg";
+import splitImg from "@/assets/split.jpg";
+import cassetteImg from "@/assets/cassette.jpg";
+import pisoTetoImg from "@/assets/piso-teto.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
