@@ -299,6 +299,29 @@ function Index() {
                 </article>
               ))}
             </div>
+
+            <div className="mt-14">
+              <p className="text-center text-xs font-bold tracking-[0.2em] text-muted-foreground">
+                MODELOS DE AR-CONDICIONADO QUE ATENDEMOS
+              </p>
+              <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {modelos.map((m) => (
+                  <article key={m.nome} className="card-surface overflow-hidden">
+                    <img
+                      src={m.image}
+                      alt={m.alt}
+                      width={800}
+                      height={600}
+                      loading="lazy"
+                      className="h-44 w-full object-cover"
+                    />
+                    <div className="p-5">
+                      <h3 className="text-base font-bold text-primary">{m.nome}</h3>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
