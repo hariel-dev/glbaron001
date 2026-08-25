@@ -296,10 +296,51 @@ function Index() {
               </h2>
             </div>
 
-            <div className="mt-10 grid items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {servicos.map((s) => (
+            {/* Bloco superior — Instalações */}
+            <div className="mt-10 grid items-stretch gap-5 sm:grid-cols-2">
+              {servicosInstalacao.map((s) => (
                 <article key={s.title} className="card-surface flex h-full flex-col overflow-hidden">
-                  {s.image ? (
+                  <img
+                    src={s.image}
+                    alt={s.alt}
+                    width={1024}
+                    height={768}
+                    loading="lazy"
+                    className="h-44 w-full object-cover [filter:saturate(0.92)_brightness(1.03)_contrast(1.03)]"
+                  />
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="text-base font-bold text-primary">{s.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            {/* Bloco intermediário — Serviços técnicos */}
+            <div className="mt-10 grid items-stretch gap-5 sm:grid-cols-3">
+              {servicosTecnicos.map((s) => (
+                <article key={s.title} className="card-surface flex h-full flex-col overflow-hidden">
+                  <div className="grid h-44 w-full place-items-center bg-primary/5">
+                    <span className="grid h-16 w-16 place-items-center rounded-2xl border border-border bg-card text-primary shadow-card">
+                      <s.icon className="h-7 w-7" />
+                    </span>
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="text-base font-bold text-primary">{s.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            {/* Bloco inferior — Modelos de aparelho */}
+            <div className="mt-16">
+              <h3 className="text-center text-lg font-bold text-primary sm:text-xl">
+                Modelos que Atendemos
+              </h3>
+              <div className="mt-6 grid items-stretch gap-5 sm:grid-cols-3">
+                {modelosAtendidos.map((s) => (
+                  <article key={s.title} className="card-surface flex h-full flex-col overflow-hidden">
                     <img
                       src={s.image}
                       alt={s.alt}
@@ -308,19 +349,13 @@ function Index() {
                       loading="lazy"
                       className="h-44 w-full object-cover [filter:saturate(0.92)_brightness(1.03)_contrast(1.03)]"
                     />
-                  ) : (
-                    <div className="grid h-44 w-full place-items-center bg-primary/5">
-                      <span className="grid h-16 w-16 place-items-center rounded-2xl border border-border bg-card text-primary shadow-card">
-                        <s.icon className="h-7 w-7" />
-                      </span>
+                    <div className="flex flex-1 flex-col p-6">
+                      <h3 className="text-base font-bold text-primary">{s.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
                     </div>
-                  )}
-                  <div className="flex flex-1 flex-col p-6">
-                    <h3 className="text-base font-bold text-primary">{s.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
-                  </div>
-                </article>
-              ))}
+                  </article>
+                ))}
+              </div>
             </div>
 
           </div>
