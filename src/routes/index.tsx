@@ -393,68 +393,34 @@ function Index() {
           </div>
         </section>
 
-        {/* POR QUE NOS ESCOLHER */}
+        {/* SOBRE NÓS */}
         <section id="sobre" className="py-20 sm:py-24">
-          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2 lg:gap-16">
-            <div className="relative">
-              <img
-                src={tecnicoImg}
-                alt="Técnico uniformizado realizando manutenção em ar condicionado split"
-                loading="lazy"
-                width={1024}
-                height={1280}
-                className="w-full rounded-2xl object-cover shadow-lift"
-              />
-              <div className="absolute -bottom-5 left-5 right-5 rounded-xl bg-primary px-5 py-4 text-primary-foreground shadow-lift sm:right-auto">
-                <p className="text-2xl font-extrabold text-accent">+10 anos</p>
-                <p className="text-xs text-primary-foreground/75">
-                  de experiência em refrigeração na região
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <p className="text-xs font-bold tracking-[0.2em] text-muted-foreground">
-                POR QUE NOS ESCOLHER
-              </p>
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="max-w-3xl">
+              <p className="text-xs font-bold tracking-[0.2em] text-muted-foreground">SOBRE NÓS</p>
               <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-primary sm:text-4xl">
-                Técnica de fabricante, atendimento de gente da sua cidade.
+                Mais de 5 anos construindo confiança em Itapetininga e região.
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Trabalhamos com procedimentos padronizados, ferramentas calibradas e registro de
-                cada serviço executado — do residencial ao contrato corporativo.
+                A Global Ar nasceu da vontade de oferecer um atendimento técnico de verdade: próximo,
+                honesto e bem-feito. Ao longo de mais de 5 anos no mercado, transformamos a
+                experiência de dezenas de clientes residenciais e comerciais em Itapetininga e
+                região, unindo conhecimento técnico a um relacionamento baseado na confiança.
+                Cada instalação, manutenção ou reparo é uma oportunidade de provar que é possível
+                aliar eficiência, respeito ao cliente e preço justo.
               </p>
-              <ul className="mt-7 space-y-3.5">
-                {beneficios.map((b) => (
-                  <li
-                    key={b.text}
-                    className={
-                      b.highlight
-                        ? "flex items-start gap-3 rounded-lg border border-accent/40 bg-accent/10 px-3 py-2.5"
-                        : "flex items-start gap-3"
-                    }
-                  >
-                    <span
-                      className={
-                        b.highlight
-                          ? "mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-accent text-accent-foreground"
-                          : "mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-accent/15 text-primary"
-                      }
-                    >
-                      <Check className="h-3.5 w-3.5" />
-                    </span>
-                    <span
-                      className={
-                        b.highlight
-                          ? "text-sm font-semibold text-primary sm:text-base"
-                          : "text-sm font-medium text-foreground sm:text-base"
-                      }
-                    >
-                      {b.text}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+            </div>
+
+            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {pilares.map((p) => (
+                <article key={p.title} className="card-surface p-6">
+                  <span className="grid h-11 w-11 place-items-center rounded-lg bg-primary/5 text-primary">
+                    <p.icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="mt-5 text-base font-bold text-primary">{p.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
