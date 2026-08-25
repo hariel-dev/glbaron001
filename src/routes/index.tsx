@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  Wrench,
   ClipboardCheck,
   SprayCan,
   Thermometer,
@@ -63,42 +62,22 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const servicos = [
+const servicosInstalacao = [
   {
-    icon: Wrench,
     title: "Instalação Residencial",
     text: "Split, Cassete e Piso Teto instalados com projeto correto de carga térmica e acabamento impecável. De 9.000 até 18.000 BTUs.",
     image: instalacaoResidencialImg,
     alt: "Ar-condicionado split instalado em sala de estar residencial",
   },
   {
-    icon: Wrench,
     title: "Instalação Comercial",
     text: "Climatização Cassete e Piso Teto: projeto de carga térmica sob medida e acabamento impecável. De 24.000 até 60.000 BTUs.",
     image: instalacaoComercialImg,
     alt: "Ar-condicionado cassete instalado em forro de ambiente comercial",
   },
-  {
-    icon: Snowflake,
-    title: "Split",
-    text: "Alta eficiência e silêncio para quartos, salas e escritórios, com instalação limpa e alinhada ao ambiente.",
-    image: splitImg,
-    alt: "Ar-condicionado Split instalado em parede",
-  },
-  {
-    icon: Snowflake,
-    title: "Piso/Teto",
-    text: "Ideal para ambientes amplos e comerciais, com grande vazão de ar e instalação versátil no piso ou no teto.",
-    image: pisoTetoImg,
-    alt: "Ar-condicionado Piso/Teto instalado próximo ao teto",
-  },
-  {
-    icon: Snowflake,
-    title: "Cassete",
-    text: "Embutido no forro, distribui o ar em 360° com visual discreto e conforto uniforme em toda a área.",
-    image: cassetteImg,
-    alt: "Ar-condicionado Cassete embutido em forro de gesso",
-  },
+];
+
+const servicosTecnicos = [
   {
     icon: ClipboardCheck,
     title: "Manutenção Preventiva (PMOC)",
@@ -113,6 +92,27 @@ const servicos = [
     icon: Thermometer,
     title: "Manutenção Corretiva",
     text: "Diagnóstico rápido, reparo de vazamentos, recarga de gás e troca de componentes.",
+  },
+];
+
+const modelosAtendidos = [
+  {
+    title: "Split",
+    text: "Alta eficiência e silêncio para quartos, salas e escritórios, com instalação limpa e alinhada ao ambiente.",
+    image: splitImg,
+    alt: "Ar-condicionado Split instalado em parede",
+  },
+  {
+    title: "Cassete",
+    text: "Embutido no forro, distribui o ar em 360° com visual discreto e conforto uniforme em toda a área.",
+    image: cassetteImg,
+    alt: "Ar-condicionado Cassete embutido em forro de gesso",
+  },
+  {
+    title: "Piso/Teto",
+    text: "Ideal para ambientes amplos e comerciais, com grande vazão de ar e instalação versátil no piso ou no teto.",
+    image: pisoTetoImg,
+    alt: "Ar-condicionado Piso/Teto instalado próximo ao teto",
   },
 ];
 
@@ -296,10 +296,51 @@ function Index() {
               </h2>
             </div>
 
-            <div className="mt-10 grid items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {servicos.map((s) => (
+            {/* Bloco superior — Instalações */}
+            <div className="mt-10 grid items-stretch gap-5 sm:grid-cols-2">
+              {servicosInstalacao.map((s) => (
                 <article key={s.title} className="card-surface flex h-full flex-col overflow-hidden">
-                  {s.image ? (
+                  <img
+                    src={s.image}
+                    alt={s.alt}
+                    width={1024}
+                    height={768}
+                    loading="lazy"
+                    className="h-44 w-full object-cover [filter:saturate(0.92)_brightness(1.03)_contrast(1.03)]"
+                  />
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="text-base font-bold text-primary">{s.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            {/* Bloco intermediário — Serviços técnicos */}
+            <div className="mt-10 grid items-stretch gap-5 sm:grid-cols-3">
+              {servicosTecnicos.map((s) => (
+                <article key={s.title} className="card-surface flex h-full flex-col overflow-hidden">
+                  <div className="grid h-44 w-full place-items-center bg-primary/5">
+                    <span className="grid h-16 w-16 place-items-center rounded-2xl border border-border bg-card text-primary shadow-card">
+                      <s.icon className="h-7 w-7" />
+                    </span>
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="text-base font-bold text-primary">{s.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            {/* Bloco inferior — Modelos de aparelho */}
+            <div className="mt-16">
+              <h3 className="text-center text-lg font-bold text-primary sm:text-xl">
+                Modelos que Atendemos
+              </h3>
+              <div className="mt-6 grid items-stretch gap-5 sm:grid-cols-3">
+                {modelosAtendidos.map((s) => (
+                  <article key={s.title} className="card-surface flex h-full flex-col overflow-hidden">
                     <img
                       src={s.image}
                       alt={s.alt}
@@ -308,19 +349,13 @@ function Index() {
                       loading="lazy"
                       className="h-44 w-full object-cover [filter:saturate(0.92)_brightness(1.03)_contrast(1.03)]"
                     />
-                  ) : (
-                    <div className="grid h-44 w-full place-items-center bg-primary/5">
-                      <span className="grid h-16 w-16 place-items-center rounded-2xl border border-border bg-card text-primary shadow-card">
-                        <s.icon className="h-7 w-7" />
-                      </span>
+                    <div className="flex flex-1 flex-col p-6">
+                      <h3 className="text-base font-bold text-primary">{s.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
                     </div>
-                  )}
-                  <div className="flex flex-1 flex-col p-6">
-                    <h3 className="text-base font-bold text-primary">{s.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
-                  </div>
-                </article>
-              ))}
+                  </article>
+                ))}
+              </div>
             </div>
 
           </div>
