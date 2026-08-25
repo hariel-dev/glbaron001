@@ -66,11 +66,36 @@ const servicos = [
     icon: Wrench,
     title: "Instalação Residencial",
     text: "Split, Cassete e Piso Teto instalados com projeto correto de carga térmica e acabamento impecável. De 9.000 até 18.000 BTUs.",
+    image: instalacaoResidencialImg,
+    alt: "Ar-condicionado split instalado em sala de estar residencial",
   },
   {
     icon: Wrench,
     title: "Instalação Comercial",
     text: "Climatização Cassete e Piso Teto: projeto de carga térmica sob medida e acabamento impecável. De 24.000 até 60.000 BTUs.",
+    image: instalacaoComercialImg,
+    alt: "Ar-condicionado cassete instalado em forro de ambiente comercial",
+  },
+  {
+    icon: Snowflake,
+    title: "Split",
+    text: "Alta eficiência e silêncio para quartos, salas e escritórios, com instalação limpa e alinhada ao ambiente.",
+    image: splitImg,
+    alt: "Ar-condicionado Split instalado em parede",
+  },
+  {
+    icon: Snowflake,
+    title: "Piso/Teto",
+    text: "Ideal para ambientes amplos e comerciais, com grande vazão de ar e instalação versátil no piso ou no teto.",
+    image: pisoTetoImg,
+    alt: "Ar-condicionado Piso/Teto instalado próximo ao teto",
+  },
+  {
+    icon: Snowflake,
+    title: "Cassete",
+    text: "Embutido no forro, distribui o ar em 360° com visual discreto e conforto uniforme em toda a área.",
+    image: cassetteImg,
+    alt: "Ar-condicionado Cassete embutido em forro de gesso",
   },
   {
     icon: ClipboardCheck,
@@ -89,23 +114,6 @@ const servicos = [
   },
 ];
 
-const modelos = [
-  {
-    nome: "Split",
-    image: splitImg,
-    alt: "Ar-condicionado Split instalado em parede",
-  },
-  {
-    nome: "Piso/Teto",
-    image: pisoTetoImg,
-    alt: "Ar-condicionado Piso/Teto instalado próximo ao teto",
-  },
-  {
-    nome: "Cassete",
-    image: cassetteImg,
-    alt: "Ar-condicionado Cassete embutido em forro de gesso",
-  },
-];
 
 const pilares = [
   {
