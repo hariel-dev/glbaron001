@@ -139,28 +139,28 @@ const pilares = [
 
 const depoimentos = [
   {
-    nome: "Renata Camargo",
-    local: "Jardim Fogaça, Itapetininga",
+    nome: "romeu moraes",
+    local: "Avaliação do Google",
     texto:
-      "Instalaram dois splits em casa no mesmo dia. Serviço limpo, organizado e explicaram tudo sobre o uso.",
+      "Minha experiência foi incrível, o Bruno e excelente no trabalho dele, estamos muito felizes com o resultado.",
   },
   {
-    nome: "Marcos Ferraz",
-    local: "Centro, Itapetininga",
+    nome: "Juliano Baptista",
+    local: "Avaliação do Google",
     texto:
-      "Fazemos a manutenção preventiva do escritório com eles. Nunca mais tivemos parada de equipamento.",
+      "Excelentes profissionais, valeu o investimento, serviço de primeira, muito obrigado !!",
   },
   {
-    nome: "Juliana Prestes",
-    local: "Vila Barth, Itapetininga",
+    nome: "Guilherme Oliveira",
+    local: "Avaliação do Google",
     texto:
-      "A higienização resolveu o cheiro do aparelho e a alergia do meu filho melhorou muito. Recomendo.",
+      "Trabalho impecável, instalação do ar Condicionado DAIKIN seguindo todas as normas do Fabricante e seguindo a risca o manual! Preço justo e trabalho de confiança.",
   },
   {
-    nome: "Anderson Ribeiro",
-    local: "Taquaral, Itapetininga",
+    nome: "Suellen Mariano",
+    local: "Avaliação do Google",
     texto:
-      "Chamei às 8h e às 11h o ar já estava gelando de novo. Diagnóstico honesto e preço justo.",
+      "Bom atendimento, educados e prestativos. Realizaram a instalação com cuidado, profissionalismo e organização. Prestaram todas as informações necessárias. 🙏",
   },
 ];
 
