@@ -185,6 +185,11 @@ const servicosB2B = [
     title: "Retrofit e Modernização de Sistemas",
     text: "Substituição de equipamentos antigos por motores e compressores modernos de baixo consumo elétrico.",
   },
+  {
+    icon: Milk,
+    title: "Resfriadores de Leite",
+    text: "Instalação, manutenção e assistência técnica em tanques e resfriadores de leite para produtores rurais.",
+  },
 ];
 
 const setoresB2B = [
