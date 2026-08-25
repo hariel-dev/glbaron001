@@ -87,6 +87,24 @@ const servicos = [
   },
 ];
 
+const modelos = [
+  {
+    nome: "Split",
+    image: splitImg,
+    alt: "Ar-condicionado Split instalado em parede",
+  },
+  {
+    nome: "Piso/Teto",
+    image: pisoTetoImg,
+    alt: "Ar-condicionado Piso/Teto instalado próximo ao teto",
+  },
+  {
+    nome: "Cassete",
+    image: cassetteImg,
+    alt: "Ar-condicionado Cassete embutido em forro de gesso",
+  },
+];
+
 const beneficios = [
   {
     text: "Instalador Credenciado Midea e Philco: Mantemos a garantia de fábrica do seu equipamento na instalação.",
