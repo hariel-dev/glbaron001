@@ -543,6 +543,22 @@ function Index() {
                     <span className="block truncate font-semibold text-primary">{CITY}</span>
                   </span>
                 </li>
+                <li className="flex items-center gap-3">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-primary/5 text-primary">
+                    <Instagram className="h-4 w-4" />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-xs text-muted-foreground">Instagram</span>
+                    <a
+                      href="https://instagram.com/globalarrefrigeracao"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block truncate font-semibold text-primary hover:text-accent"
+                    >
+                      @globalarrefrigeracao
+                    </a>
+                  </span>
+                </li>
               </ul>
 
               <a
