@@ -123,17 +123,6 @@ const pilares = [
   },
 ];
 
-const beneficios = [
-  {
-    text: "Instalador Credenciado Midea e Philco: Mantemos a garantia de fábrica do seu equipamento na instalação.",
-    highlight: true,
-  },
-  { text: "Equipe própria e uniformizada", highlight: false },
-  { text: "Certificação das principais marcas", highlight: false },
-  { text: "Atendimento pontual e limpeza pós-serviço", highlight: false },
-  { text: "Garantia em todos os serviços", highlight: false },
-  { text: "Atuação em Itapetininga e região", highlight: false },
-];
 
 const depoimentos = [
   {
