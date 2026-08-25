@@ -258,7 +258,8 @@ function Index() {
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
                 Instalação profissional, manutenção preventiva e higienização especializada de ar
-                condicionado. Equipe certificada e garantia de serviço.
+                condicionado, além de soluções em câmaras frias e refrigeração comercial. Equipe
+                certificada e garantia de serviço.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
