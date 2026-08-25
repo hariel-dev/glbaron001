@@ -673,17 +673,28 @@ function Index() {
       </main>
 
       <footer className="surface-deep">
-        <div className="mx-auto grid max-w-6xl gap-4 px-4 py-10 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center">
+        <div className="mx-auto grid max-w-6xl gap-6 px-4 py-10 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center">
           <div className="min-w-0">
             <p className="text-sm font-extrabold tracking-tight">GLOBAL AR REFRIGERAÇÃO ITAPETININGA</p>
             <p className="mt-1 text-xs text-primary-foreground/65">
-              © 2024 — Todos os direitos reservados. CNPJ e registros técnicos sob solicitação.
+              © 2026 — Todos os direitos reservados. CNPJ e registros técnicos sob solicitação.
             </p>
           </div>
-          <p className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 px-3.5 py-1.5 text-xs font-medium">
-            <MapPin className="h-3.5 w-3.5 text-accent" />
-            Atendemos em Itapetininga e Região
-          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="https://instagram.com/globalarrefrigeracao"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 px-3.5 py-1.5 text-xs font-medium transition hover:border-accent/50 hover:text-accent"
+            >
+              <Instagram className="h-3.5 w-3.5 text-accent" />
+              @globalarrefrigeracao
+            </a>
+            <p className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 px-3.5 py-1.5 text-xs font-medium">
+              <MapPin className="h-3.5 w-3.5 text-accent" />
+              Atendemos em Itapetininga e Região
+            </p>
+          </div>
         </div>
       </footer>
 
