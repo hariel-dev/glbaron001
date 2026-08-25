@@ -38,6 +38,8 @@ import heroImg from "@/assets/hero-split.jpg";
 import splitImg from "@/assets/split.jpg";
 import cassetteImg from "@/assets/cassette.jpg";
 import pisoTetoImg from "@/assets/piso-teto.jpg";
+import instalacaoResidencialImg from "@/assets/instalacao-residencial.jpg";
+import instalacaoComercialImg from "@/assets/instalacao-comercial.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -66,11 +68,36 @@ const servicos = [
     icon: Wrench,
     title: "Instalação Residencial",
     text: "Split, Cassete e Piso Teto instalados com projeto correto de carga térmica e acabamento impecável. De 9.000 até 18.000 BTUs.",
+    image: instalacaoResidencialImg,
+    alt: "Ar-condicionado split instalado em sala de estar residencial",
   },
   {
     icon: Wrench,
     title: "Instalação Comercial",
     text: "Climatização Cassete e Piso Teto: projeto de carga térmica sob medida e acabamento impecável. De 24.000 até 60.000 BTUs.",
+    image: instalacaoComercialImg,
+    alt: "Ar-condicionado cassete instalado em forro de ambiente comercial",
+  },
+  {
+    icon: Snowflake,
+    title: "Split",
+    text: "Alta eficiência e silêncio para quartos, salas e escritórios, com instalação limpa e alinhada ao ambiente.",
+    image: splitImg,
+    alt: "Ar-condicionado Split instalado em parede",
+  },
+  {
+    icon: Snowflake,
+    title: "Piso/Teto",
+    text: "Ideal para ambientes amplos e comerciais, com grande vazão de ar e instalação versátil no piso ou no teto.",
+    image: pisoTetoImg,
+    alt: "Ar-condicionado Piso/Teto instalado próximo ao teto",
+  },
+  {
+    icon: Snowflake,
+    title: "Cassete",
+    text: "Embutido no forro, distribui o ar em 360° com visual discreto e conforto uniforme em toda a área.",
+    image: cassetteImg,
+    alt: "Ar-condicionado Cassete embutido em forro de gesso",
   },
   {
     icon: ClipboardCheck,
@@ -89,23 +116,6 @@ const servicos = [
   },
 ];
 
-const modelos = [
-  {
-    nome: "Split",
-    image: splitImg,
-    alt: "Ar-condicionado Split instalado em parede",
-  },
-  {
-    nome: "Piso/Teto",
-    image: pisoTetoImg,
-    alt: "Ar-condicionado Piso/Teto instalado próximo ao teto",
-  },
-  {
-    nome: "Cassete",
-    image: cassetteImg,
-    alt: "Ar-condicionado Cassete embutido em forro de gesso",
-  },
-];
 
 const pilares = [
   {
@@ -286,40 +296,33 @@ function Index() {
               </h2>
             </div>
 
-            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-10 grid items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {servicos.map((s) => (
-                <article key={s.title} className="card-surface p-6">
-                  <span className="grid h-11 w-11 place-items-center rounded-lg bg-primary/5 text-primary">
-                    <s.icon className="h-5 w-5" />
-                  </span>
-                  <h3 className="mt-5 text-base font-bold text-primary">{s.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+                <article key={s.title} className="card-surface flex h-full flex-col overflow-hidden">
+                  {s.image ? (
+                    <img
+                      src={s.image}
+                      alt={s.alt}
+                      width={1024}
+                      height={768}
+                      loading="lazy"
+                      className="h-44 w-full object-cover [filter:saturate(0.92)_brightness(1.03)_contrast(1.03)]"
+                    />
+                  ) : (
+                    <div className="grid h-44 w-full place-items-center bg-primary/5">
+                      <span className="grid h-16 w-16 place-items-center rounded-2xl border border-border bg-card text-primary shadow-card">
+                        <s.icon className="h-7 w-7" />
+                      </span>
+                    </div>
+                  )}
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="text-base font-bold text-primary">{s.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+                  </div>
                 </article>
               ))}
             </div>
 
-            <div className="mt-14">
-              <p className="text-center text-xs font-bold tracking-[0.2em] text-muted-foreground">
-                MODELOS DE AR-CONDICIONADO QUE ATENDEMOS
-              </p>
-              <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                {modelos.map((m) => (
-                  <article key={m.nome} className="card-surface overflow-hidden">
-                    <img
-                      src={m.image}
-                      alt={m.alt}
-                      width={800}
-                      height={600}
-                      loading="lazy"
-                      className="h-44 w-full object-cover"
-                    />
-                    <div className="p-5">
-                      <h3 className="text-base font-bold text-primary">{m.nome}</h3>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
           </div>
         </section>
 
