@@ -241,7 +241,7 @@ function Index() {
               </span>
               <span className="mt-3 inline-flex items-center gap-2 rounded-full border border-accent/50 bg-accent/20 px-3.5 py-1.5 text-xs font-bold tracking-wide text-accent shadow-card">
                 <Check className="h-3.5 w-3.5" />
-                Técnico Credenciado Midea & Philco em Itapetininga
+                Técnicos Credenciados Midea & Philco
               </span>
               <h1 className="mt-5 text-3xl font-extrabold leading-[1.1] tracking-tight text-primary-foreground sm:text-5xl">
                 Conforto térmico e ar puro para sua casa ou empresa em{" "}
