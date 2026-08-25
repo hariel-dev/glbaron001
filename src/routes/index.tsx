@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
+  Wrench,
   ClipboardCheck,
   SprayCan,
   Thermometer,
@@ -89,7 +90,7 @@ const servicosTecnicos = [
     text: "Limpeza técnica completa com eliminação de fungos, ácaros e bactérias do sistema.",
   },
   {
-    icon: Thermometer,
+    icon: Wrench,
     title: "Manutenção Corretiva",
     text: "Diagnóstico rápido, reparo de vazamentos, recarga de gás e troca de componentes.",
   },
