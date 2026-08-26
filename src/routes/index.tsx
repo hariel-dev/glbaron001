@@ -516,7 +516,7 @@ function Index() {
 
                     <div className="mt-8 border-t border-primary-foreground/15 pt-6">
                       <span className="block text-2xl font-extrabold tracking-tight text-primary-foreground sm:text-3xl">
-                        %100 de Transparência
+                        100% de Transparência
                       </span>
                       <p className="mt-1.5 text-sm leading-relaxed text-primary-foreground/75">
                         Diagnósticos precisos e sem custos ocultos.
