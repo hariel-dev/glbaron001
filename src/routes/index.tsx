@@ -258,14 +258,16 @@ function Index() {
 
           <div className="mx-auto max-w-6xl px-4 py-20 sm:py-28 lg:py-36">
             <div className="max-w-2xl">
-              <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-semibold tracking-wide text-accent">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                ATENDIMENTO EM ITAPETININGA E REGIÃO
-              </span>
-              <span className="mt-3 inline-flex items-center gap-2 rounded-full border border-accent/50 bg-accent/20 px-3.5 py-1.5 text-xs font-bold tracking-wide text-accent shadow-card">
-                <Check className="h-3.5 w-3.5" />
-                Técnicos Credenciados Midea & Philco
-              </span>
+              <div className="flex flex-col items-start gap-2">
+                <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-semibold tracking-wide text-accent">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                  ATENDIMENTO EM ITAPETININGA E REGIÃO
+                </span>
+                <span className="inline-flex items-center gap-2 rounded-full border border-accent/50 bg-accent/20 px-3.5 py-1.5 text-xs font-bold tracking-wide text-accent shadow-card">
+                  <Check className="h-3.5 w-3.5" />
+                  Técnicos Credenciados Midea & Philco
+                </span>
+              </div>
               <h1 className="mt-5 text-3xl font-extrabold leading-[1.1] tracking-tight text-primary-foreground sm:text-5xl">
                 Conforto térmico e ar puro para sua casa ou empresa em{" "}
                 <span className="text-accent">Itapetininga</span>.
