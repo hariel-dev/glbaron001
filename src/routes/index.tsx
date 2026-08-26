@@ -460,71 +460,52 @@ function Index() {
         {/* SOBRE NÓS */}
         <section id="sobre" className="bg-surface py-20 sm:py-24">
           <div className="mx-auto max-w-6xl px-4">
-            <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-12">
-              {/* Coluna da Esquerda: Storytelling + Pilares */}
-              <div>
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+              <div className="max-w-3xl">
                 <p className="text-xs font-bold tracking-[0.2em] text-muted-foreground">SOBRE NÓS</p>
                 <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-primary sm:text-4xl">
-                  Mais de 5 anos garantindo o clima perfeito em Itapetininga e região.
+                  Mais de 5 anos construindo confiança em Itapetininga e região.
                 </h2>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                  A Global Ar nasceu com uma missão clara: eliminar a dor de cabeça com serviços
-                  malfeitos de climatização. Combinamos técnica de fabricante a um atendimento honesto
-                  e transparente. Em cada projeto residencial ou comercial, provamos que eficiência
-                  energética, respeito ao cliente e preço justo andam juntos.
+                  A Global Ar nasceu da vontade de oferecer um atendimento técnico de verdade: próximo,
+                  honesto e bem-feito. Ao longo de mais de 5 anos no mercado, transformamos a
+                  experiência de dezenas de clientes residenciais e comerciais em Itapetininga e
+                  região, unindo conhecimento técnico a um relacionamento baseado na confiança.
+                  Cada instalação, manutenção ou reparo é uma oportunidade de provar que é possível
+                  aliar eficiência, respeito ao cliente e preço justo.
                 </p>
-
-                <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {pilares.map((p) => (
-                    <article
-                      key={p.title}
-                      className="group rounded-2xl border border-border bg-card p-5 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lift hover:border-accent/40"
-                    >
-                      <span
-                        className="grid h-11 w-11 place-items-center rounded-xl transition-transform duration-300 group-hover:scale-110"
-                        style={{ backgroundColor: p.bg, color: p.color }}
-                      >
-                        <p.icon className="h-5 w-5" />
-                      </span>
-                      <h3 className="mt-4 text-sm font-bold text-primary">{p.title}</h3>
-                      <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
-                    </article>
-                  ))}
-                </div>
               </div>
 
-              {/* Coluna da Direita: Destaque Estatístico */}
-              <div className="lg:sticky lg:top-8">
-                <article className="relative overflow-hidden rounded-3xl bg-primary p-8 text-primary-foreground shadow-lift sm:p-10">
-                  <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-accent/10 blur-3xl" />
-                  <div className="absolute -bottom-10 -left-10 h-32 w-32 rounded-full bg-accent/10 blur-3xl" />
+              <div className="shrink-0">
+                <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-bold tracking-wide text-accent shadow-card">
+                  <Award className="h-4 w-4" />
+                  + de 5 Anos de Experiência em Itapetininga e Região
+                </span>
+              </div>
+            </div>
 
-                  <div className="relative">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/15 px-3 py-1 text-xs font-bold tracking-wide text-accent">
-                      <Award className="h-3.5 w-3.5" />
-                      PROVA SOCIAL
-                    </div>
-
-                    <div className="mt-6">
-                      <span className="block text-5xl font-extrabold tracking-tight text-accent sm:text-6xl">
-                        +5 Anos
-                      </span>
-                      <p className="mt-2 text-base font-medium leading-snug text-primary-foreground/85 sm:text-lg">
-                        De experiência e credibilidade no mercado regional.
-                      </p>
-                    </div>
-
-                    <div className="mt-8 border-t border-primary-foreground/15 pt-6">
-                      <span className="block text-2xl font-extrabold tracking-tight text-primary-foreground sm:text-3xl">
-                        100% de Transparência
-                      </span>
-                      <p className="mt-1.5 text-sm leading-relaxed text-primary-foreground/75">
-                        Diagnósticos precisos e sem custos ocultos.
-                      </p>
-                    </div>
-                  </div>
+            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {pilares.map((p) => (
+                <article
+                  key={p.title}
+                  className="card-surface group relative overflow-hidden p-6"
+                >
+                  <div
+                    className="absolute inset-x-0 top-0 h-1 transition-all duration-300 group-hover:h-full"
+                    style={{ backgroundColor: p.color, opacity: 0.12 }}
+                  />
+                  <span
+                    className="relative grid h-12 w-12 place-items-center rounded-xl transition-transform duration-300 group-hover:scale-110"
+                    style={{ backgroundColor: p.bg, color: p.color }}
+                  >
+                    <p.icon className="h-6 w-6" />
+                  </span>
+                  <h3 className="relative mt-5 text-base font-bold text-primary">{p.title}</h3>
+                  <p className="relative mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {p.text}
+                  </p>
                 </article>
-              </div>
+              ))}
             </div>
           </div>
         </section>
