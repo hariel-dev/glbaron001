@@ -460,29 +460,28 @@ function Index() {
         {/* SOBRE NÓS */}
         <section id="sobre" className="bg-surface py-20 sm:py-24">
           <div className="mx-auto max-w-6xl px-4">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-              <div className="max-w-3xl">
-                <p className="text-xs font-bold tracking-[0.2em] text-muted-foreground">SOBRE NÓS</p>
-                <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-primary sm:text-4xl">
-                  Mais de 5 anos construindo confiança em Itapetininga e região.
-                </h2>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                  A Global Ar nasceu da vontade de oferecer um atendimento técnico de verdade: próximo,
-                  honesto e bem-feito. Ao longo de mais de 5 anos no mercado, transformamos a
-                  experiência de dezenas de clientes residenciais e comerciais em Itapetininga e
-                  região, unindo conhecimento técnico a um relacionamento baseado na confiança.
-                  Cada instalação, manutenção ou reparo é uma oportunidade de provar que é possível
-                  aliar eficiência, respeito ao cliente e preço justo.
-                </p>
-              </div>
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="text-xs font-bold tracking-[0.2em] text-muted-foreground">SOBRE NÓS</p>
+              <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-primary sm:text-4xl">
+                Mais de 5 anos construindo confiança em Itapetininga e região.
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                A Global Ar nasceu da vontade de oferecer um atendimento técnico de verdade: próximo,
+                honesto e bem-feito. Ao longo de mais de 5 anos no mercado, transformamos a
+                experiência de dezenas de clientes residenciais e comerciais em Itapetininga e
+                região, unindo conhecimento técnico a um relacionamento baseado na confiança.
+                Cada instalação, manutenção ou reparo é uma oportunidade de provar que é possível
+                aliar eficiência, respeito ao cliente e preço justo.
+              </p>
 
-              <div className="shrink-0">
+              <div className="mt-6 inline-flex">
                 <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-bold tracking-wide text-accent shadow-card">
                   <Award className="h-4 w-4" />
                   + de 5 Anos de Experiência em Itapetininga e Região
                 </span>
               </div>
             </div>
+
 
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {pilares.map((p) => (
