@@ -123,16 +123,22 @@ const pilares = [
     icon: Award,
     title: "Qualidade",
     text: "Excelência na escolha dos produtos, ferramentas e execução técnica.",
+    color: "var(--pilar-qualidade)",
+    bg: "oklch(0.97 0.03 85 / 0.5)",
   },
   {
     icon: HeartHandshake,
     title: "Ética",
     text: "Relacionamento transparente, diagnóstico honesto e respeito ao cliente.",
+    color: "var(--pilar-etica)",
+    bg: "oklch(0.96 0.04 250 / 0.45)",
   },
   {
     icon: Leaf,
     title: "Sustentabilidade",
     text: "Foco em eficiência energética, economia na conta de luz e descarte responsável.",
+    color: "var(--pilar-sustentabilidade)",
+    bg: "oklch(0.96 0.03 145 / 0.45)",
   },
 ];
 
