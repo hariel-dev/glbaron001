@@ -123,16 +123,22 @@ const pilares = [
     icon: Award,
     title: "Qualidade",
     text: "Excelência na escolha dos produtos, ferramentas e execução técnica.",
+    color: "var(--pilar-qualidade)",
+    bg: "oklch(0.97 0.03 85 / 0.5)",
   },
   {
     icon: HeartHandshake,
     title: "Ética",
     text: "Relacionamento transparente, diagnóstico honesto e respeito ao cliente.",
+    color: "var(--pilar-etica)",
+    bg: "oklch(0.96 0.04 250 / 0.45)",
   },
   {
     icon: Leaf,
     title: "Sustentabilidade",
     text: "Foco em eficiência energética, economia na conta de luz e descarte responsável.",
+    color: "var(--pilar-sustentabilidade)",
+    bg: "oklch(0.96 0.03 145 / 0.45)",
   },
 ];
 
@@ -320,16 +326,12 @@ function Index() {
             {/* Bloco intermediário — Serviços técnicos */}
             <div className="mt-10 grid items-stretch gap-5 sm:grid-cols-3">
               {servicosTecnicos.map((s) => (
-                <article key={s.title} className="card-surface flex h-full flex-col overflow-hidden">
-                  <div className="grid h-44 w-full place-items-center bg-primary/5">
-                    <span className="grid h-16 w-16 place-items-center rounded-2xl border border-border bg-card text-primary shadow-card">
-                      <s.icon className="h-7 w-7" />
-                    </span>
-                  </div>
-                  <div className="flex flex-1 flex-col p-6">
-                    <h3 className="text-base font-bold text-primary">{s.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
-                  </div>
+                <article key={s.title} className="card-surface flex h-full flex-col p-6 text-center">
+                  <span className="mx-auto grid h-12 w-12 place-items-center rounded-xl bg-primary/5 text-primary">
+                    <s.icon className="h-6 w-6" />
+                  </span>
+                  <h3 className="mt-4 text-base font-bold text-primary">{s.title}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
                 </article>
               ))}
             </div>
@@ -454,31 +456,52 @@ function Index() {
         </section>
 
         {/* SOBRE NÓS */}
-        <section id="sobre" className="py-20 sm:py-24">
+        <section id="sobre" className="bg-surface py-20 sm:py-24">
           <div className="mx-auto max-w-6xl px-4">
-            <div className="max-w-3xl">
-              <p className="text-xs font-bold tracking-[0.2em] text-muted-foreground">SOBRE NÓS</p>
-              <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-primary sm:text-4xl">
-                Mais de 5 anos construindo confiança em Itapetininga e região.
-              </h2>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                A Global Ar nasceu da vontade de oferecer um atendimento técnico de verdade: próximo,
-                honesto e bem-feito. Ao longo de mais de 5 anos no mercado, transformamos a
-                experiência de dezenas de clientes residenciais e comerciais em Itapetininga e
-                região, unindo conhecimento técnico a um relacionamento baseado na confiança.
-                Cada instalação, manutenção ou reparo é uma oportunidade de provar que é possível
-                aliar eficiência, respeito ao cliente e preço justo.
-              </p>
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+              <div className="max-w-3xl">
+                <p className="text-xs font-bold tracking-[0.2em] text-muted-foreground">SOBRE NÓS</p>
+                <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-primary sm:text-4xl">
+                  Mais de 5 anos construindo confiança em Itapetininga e região.
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  A Global Ar nasceu da vontade de oferecer um atendimento técnico de verdade: próximo,
+                  honesto e bem-feito. Ao longo de mais de 5 anos no mercado, transformamos a
+                  experiência de dezenas de clientes residenciais e comerciais em Itapetininga e
+                  região, unindo conhecimento técnico a um relacionamento baseado na confiança.
+                  Cada instalação, manutenção ou reparo é uma oportunidade de provar que é possível
+                  aliar eficiência, respeito ao cliente e preço justo.
+                </p>
+              </div>
+
+              <div className="shrink-0">
+                <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-bold tracking-wide text-accent shadow-card">
+                  <Award className="h-4 w-4" />
+                  + de 5 Anos de Experiência em Itapetininga e Região
+                </span>
+              </div>
             </div>
 
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {pilares.map((p) => (
-                <article key={p.title} className="card-surface p-6">
-                  <span className="grid h-11 w-11 place-items-center rounded-lg bg-primary/5 text-primary">
-                    <p.icon className="h-5 w-5" />
+                <article
+                  key={p.title}
+                  className="card-surface group relative overflow-hidden p-6"
+                >
+                  <div
+                    className="absolute inset-x-0 top-0 h-1 transition-all duration-300 group-hover:h-full"
+                    style={{ backgroundColor: p.color, opacity: 0.12 }}
+                  />
+                  <span
+                    className="relative grid h-12 w-12 place-items-center rounded-xl transition-transform duration-300 group-hover:scale-110"
+                    style={{ backgroundColor: p.bg, color: p.color }}
+                  >
+                    <p.icon className="h-6 w-6" />
                   </span>
-                  <h3 className="mt-5 text-base font-bold text-primary">{p.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
+                  <h3 className="relative mt-5 text-base font-bold text-primary">{p.title}</h3>
+                  <p className="relative mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {p.text}
+                  </p>
                 </article>
               ))}
             </div>
