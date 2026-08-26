@@ -326,16 +326,12 @@ function Index() {
             {/* Bloco intermediário — Serviços técnicos */}
             <div className="mt-10 grid items-stretch gap-5 sm:grid-cols-3">
               {servicosTecnicos.map((s) => (
-                <article key={s.title} className="card-surface flex h-full flex-col overflow-hidden">
-                  <div className="grid h-44 w-full place-items-center bg-primary/5">
-                    <span className="grid h-16 w-16 place-items-center rounded-2xl border border-border bg-card text-primary shadow-card">
-                      <s.icon className="h-7 w-7" />
-                    </span>
-                  </div>
-                  <div className="flex flex-1 flex-col p-6">
-                    <h3 className="text-base font-bold text-primary">{s.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
-                  </div>
+                <article key={s.title} className="card-surface flex h-full flex-col p-6 text-center">
+                  <span className="mx-auto grid h-12 w-12 place-items-center rounded-xl bg-primary/5 text-primary">
+                    <s.icon className="h-6 w-6" />
+                  </span>
+                  <h3 className="mt-4 text-base font-bold text-primary">{s.title}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
                 </article>
               ))}
             </div>
