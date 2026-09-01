@@ -348,14 +348,16 @@ function Index() {
               <div className="mt-6 grid items-stretch gap-5 sm:grid-cols-3">
                 {modelosAtendidos.map((s) => (
                   <article key={s.title} className="card-surface flex h-full flex-col overflow-hidden">
-                    <img
-                      src={s.image}
-                      alt={s.alt}
-                      width={1024}
-                      height={768}
-                      loading="lazy"
-                      className="h-44 w-full object-cover [filter:saturate(0.92)_brightness(1.03)_contrast(1.03)]"
-                    />
+                    <div className="h-44 w-full bg-slate-50">
+                      <img
+                        src={s.image}
+                        alt={s.alt}
+                        width={1024}
+                        height={768}
+                        loading="lazy"
+                        className="h-full w-full object-contain [filter:saturate(0.92)_brightness(1.03)_contrast(1.03)]"
+                      />
+                    </div>
                     <div className="flex flex-1 flex-col p-6">
                       <h3 className="text-base font-bold text-primary">{s.title}</h3>
                       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
