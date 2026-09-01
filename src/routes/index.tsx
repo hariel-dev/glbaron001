@@ -35,7 +35,7 @@ import {
   CITY,
 } from "@/lib/site";
 import heroImg from "@/assets/hero-split.jpg";
-const splitImg = "/split.jpg";
+import splitImg from "@/assets/split.jpg.asset.json";
 import cassetteImg from "@/assets/cassette.jpg";
 import pisoTetoImg from "@/assets/piso-teto.jpg";
 import instalacaoResidencialImg from "@/assets/instalacao-residencial.jpg";
