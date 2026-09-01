@@ -37,7 +37,8 @@ import {
 import heroImg from "@/assets/hero-split.jpg";
 import splitImgAsset from "@/assets/split.jpg.asset.json";
 const splitImg = splitImgAsset.url;
-import cassetteImg from "@/assets/cassette.jpg";
+import cassetteImgAsset from "@/assets/cassette.jpg.asset.json";
+const cassetteImg = cassetteImgAsset.url;
 import pisoTetoImg from "@/assets/piso-teto.jpg";
 import instalacaoResidencialImg from "@/assets/instalacao-residencial.jpg";
 import instalacaoComercialImg from "@/assets/instalacao-comercial.jpg";
