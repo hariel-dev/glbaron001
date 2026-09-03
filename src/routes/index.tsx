@@ -312,10 +312,8 @@ function Index() {
                   <img
                     src={s.image}
                     alt={s.alt}
-                    width={1024}
-                    height={768}
                     loading="lazy"
-                    className="h-44 w-full object-contain object-center bg-slate-50 [filter:saturate(0.92)_brightness(1.03)_contrast(1.03)]"
+                    className="w-full h-48 object-cover object-top rounded-t-lg"
                   />
                   <div className="flex flex-1 flex-col p-6">
                     <h3 className="text-base font-bold text-primary">{s.title}</h3>
